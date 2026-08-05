@@ -34,10 +34,12 @@ The application extracts financial metrics and business highlights from uploaded
 
 ## Demo Output
 
-Generated examples included in the repository:
+## Demo Output
 
-- reports/JSW_Energy_Limited_report.pdf
-- reports/L&T_Technology_Services_Limited_report.pdf
+Generated example reports included in the repository:
+
+- [JSW Energy Limited Report](reports/JSW_Energy_Limited_report.pdf)
+- [L&T Technology Services Limited Report](reports/L&T_Technology_Services_Limited_report.pdf)
 
 ---
 
