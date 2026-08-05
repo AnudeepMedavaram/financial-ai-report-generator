@@ -1,0 +1,235 @@
+# Financial AI Report Generator
+
+An AI-powered web application that converts company financial documents into downloadable **equity research-style PDF reports** inspired by the Geojit Financial Services template.
+
+The application extracts financial metrics and business highlights from uploaded documents, generates structured summaries and tables using an LLM, creates charts, and produces a professional multi-page PDF report.
+
+---
+
+## Features
+
+* Upload company financial documents (**PDF** or **TXT**)
+* AI-based extraction of:
+
+  * Revenue
+  * Net Profit
+  * Operating Margin
+  * Revenue Growth YoY
+  * Profit Growth YoY
+  * Business highlights
+  * Executive summary
+* Automatic generation of:
+
+  * Financial tables
+  * Narrative research sections
+  * Revenue trend chart
+  * Risks & Outlook section
+  * Recommendation summary section
+  * Multi-page PDF report
+* One-click PDF download
+* Graceful handling of missing fields
+* Modular architecture for adding new companies and fields
+
+---
+
+## Demo Output
+
+Generated examples included in the repository:
+
+* `reports/JSW_Energy_Limited_report.pdf`
+* `reports/Pondy_Oxides_and_Chemicals_Limited_report.pdf`
+* `reports/Eternal_Limited_report.pdf`
+
+---
+
+## Tech Stack
+
+| Component       | Technology   |
+| --------------- | ------------ |
+| UI              | Streamlit    |
+| LLM             | Groq API     |
+| PDF Parsing     | PyPDF2       |
+| PDF Generation  | ReportLab    |
+| Charts          | Matplotlib   |
+| Data Validation | Pydantic     |
+| Language        | Python 3.10+ |
+
+---
+
+## Project Structure
+
+```text
+financial_ai_report_generator/
+│
+├── app.py
+├── extractor.py
+├── llm_extractor.py
+├── schemas.py
+├── charts.py
+├── report_generator.py
+├── requirements.txt
+├── README.md
+│
+├── outputs/
+│   └── *.json
+│
+├── reports/
+│   └── *.pdf
+│
+└── screenshots/
+    ├── ui.png
+    └── report.png
+```
+
+---
+
+## Where Template Fields Are Defined
+
+* **Data schema:** `schemas.py`
+* **PDF template & layout:** `report_generator.py`
+* **LLM extraction prompt:** `llm_extractor.py`
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/anudeepmedavaram/financial-ai-report-generator.git
+cd financial-ai-report-generator
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv myenv
+```
+
+Activate it:
+
+**Windows**
+
+```powershell
+myenv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source myenv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Configure API Key
+
+Create a `.streamlit/secrets.toml` file:
+
+```toml
+GROQ_API_KEY = "your_groq_api_key"
+```
+
+---
+
+## Run the Application
+
+```bash
+streamlit run app.py
+```
+
+Open the URL shown in the terminal (usually `http://localhost:8501`).
+
+---
+
+## How to Use
+
+1. Enter an optional company name.
+2. Upload a financial **PDF** or **TXT** document.
+3. Click **Analyze Financial Report**.
+4. Review the extracted metrics and summary.
+5. Click **Download Analyst Report PDF**.
+
+---
+
+## Supported Input Formats
+
+* PDF (`.pdf`)
+* Text (`.txt`)
+
+The application was tested with multiple company financial documents including investor presentations and earnings reports.
+
+---
+
+## Sample Workflow
+
+```text
+Upload PDF
+   ↓
+Extract text
+   ↓
+LLM financial extraction
+   ↓
+Generate structured data
+   ↓
+Create charts
+   ↓
+Render research-style PDF
+   ↓
+Download report
+```
+
+---
+
+## Screenshots
+
+Add screenshots in the `screenshots/` folder and reference them here:
+
+* `screenshots/ui.png`
+* `screenshots/report.png`
+
+---
+
+## Assessment Mapping
+
+| Requirement                       | Status |
+| --------------------------------- | ------ |
+| Template similar to sample report | Yes    |
+| Financial tables populated        | Yes    |
+| Narrative sections generated      | Yes    |
+| At least one chart                | Yes    |
+| PDF + TXT support                 | Yes    |
+| Missing field handling            | Yes    |
+| Downloadable PDF                  | Yes    |
+| Modular code                      | Yes    |
+
+---
+
+## Future Improvements
+
+* Dynamic valuation metrics extraction
+* Multiple chart types (margin trend, profit trend)
+* Editable recommendation section
+* CSV financial statement support
+* Analyst metadata section
+* Better visual fidelity to brokerage research reports
+
+---
+
+## Disclaimer
+
+This project is an educational and technical demonstration of AI-assisted financial document analysis and report generation. The generated reports are **not investment advice** and should not be used for investment decisions.
+
+---
+
+## Author
+
+**Anudeep Medavaram**
+
+Built as part of an AI software engineering assessment project.

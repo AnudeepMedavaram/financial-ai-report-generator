@@ -1,0 +1,6 @@
+.env
+myenv/
+__pycache__/    
+.vscode/
+outputs/
+revenue_chart.png   
