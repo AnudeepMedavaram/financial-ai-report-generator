@@ -76,10 +76,7 @@ financial_ai_report_generator/
 │
 ├── reports/
 │   └── *.pdf
-│
-└── screenshots/
-    ├── ui.png
-    └── report.png
+
 ```
 
 ---
