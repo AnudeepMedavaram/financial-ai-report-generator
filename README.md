@@ -196,5 +196,3 @@ This project is an educational and technical demonstration of AI-assisted financ
 ## Author
 
 **Anudeep Medavaram**
-
-Built as part of an AI software engineering assessment project
