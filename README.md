@@ -36,9 +36,8 @@ The application extracts financial metrics and business highlights from uploaded
 
 Generated examples included in the repository:
 
-* `reports/JSW_Energy_Limited_report.pdf`
-* `reports/Pondy_Oxides_and_Chemicals_Limited_report.pdf`
-* `reports/Eternal_Limited_report.pdf`
+- reports/JSW_Energy_Limited_report.pdf
+- reports/L&T_Technology_Services_Limited_report.pdf
 
 ---
 
